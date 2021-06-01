@@ -5,12 +5,14 @@ import EmailInputScreen from '../screens/EmailInputScreen';
 import IntroScreen from '../screens/IntroScreen';
 import LoginScreen from '../screens/LoginScreen';
 import PasswordInputScreen from '../screens/PasswordInputScreen';
+import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
 
 const StackNavigator = createStackNavigator({
     Intro: IntroScreen,
     Login: LoginScreen,
     EmailInput: EmailInputScreen,
     PasswordInput: PasswordInputScreen,
+    ForgotPassword: ForgotPasswordScreen
 });
 
 export default createAppContainer(StackNavigator);
