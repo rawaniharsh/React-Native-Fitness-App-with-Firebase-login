@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "650121506673",
+    "project_id": "fitnessworld-dd559",
+    "storage_bucket": "fitnessworld-dd559.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650121506673:android:eb3ec33d8660c2538150d0",
+        "android_client_info": {
+          "package_name": "com.fitnessapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650121506673-jg2jn6ep8av1k3h5at6hjn1pb51gc4rn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitnessapp",
+            "certificate_hash": "1be694cd8c1622fa3eef3db670f3eb1cd5ef08c3"
+          }
+        },
+        {
+          "client_id": "650121506673-jt842o4bapaf4h29tdmqv9sbc72o2plf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJkJ3-M0Qolk8TIKxwnBIGEosb_16X21E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650121506673-jt842o4bapaf4h29tdmqv9sbc72o2plf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

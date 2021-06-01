@@ -24,7 +24,7 @@ class IntroScreen extends Component {
                 </View>
                 <View style={styles.btnView}>
                     <Button
-                        onPress={() => this.props.navigation.navigate('EmailInput')}
+                        onPress={() => this.props.navigation.navigate('Signup')}
                         title="Get Stareted"
                         loading={false}
                         loadingProps={{ size: 'small', color: 'white' }}

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, ActivityIndicator, KeyboardAvoidingView, ScrollView, TextInput, TouchableOpacity } from 'react-native';
-import { Text, Icon, Button, SocialIcon, Image } from 'react-native-elements';
+import { Text, Icon, Button, SocialIcon, Image, Input } from 'react-native-elements';
 
-class EmailInputScreen extends Component {
+class SignupScreen extends Component {
 
     static navigationOptions = {
         headerShown: false
@@ -20,17 +20,54 @@ class EmailInputScreen extends Component {
                         />
                     </View>
                     <View style={styles.wrapper}>
-                        <TextInput style={styles.input}
-                            underlineColorAndroid="transparent"
+                        <Input
+                            leftIcon={<Icon
+                                name="email"
+                                color="#65499c"
+                                size={22}
+                            />}
                             placeholder="Email"
-                            placeholderTextColor="#65499c"
-                            autoCapitalize="none" />
+                            inputContainerStyle={{
+                                borderWidth: 1,
+                                borderColor: "#65499c",
+                                height: 50,
+                                borderRadius: 4,
+                                backgroundColor: '#ffff'
+                            }}
+                            autoCapitalize="none"
+                            autoCorrect={false}
+                            keyboardType="email-address"
+                            returnKeyType="next"
+                            ref={input => (this.email2input = input)}
+                            onSubmitEditing={() => {
+                                this.passwordInput2.focus();
+                            }}
+                        />
 
-                        <TextInput style={styles.input}
-                            underlineColorAndroid="transparent"
+                        <Input
+                            leftIcon={
+                                <Icon
+                                    name="lock"
+                                    color="#65499c"
+                                    size={22}
+                                />
+                            }
+                            inputContainerStyle={{
+                                borderWidth: 1,
+                                borderColor: '#65499c',
+                                borderRadius: 4,
+                                height: 50,
+                                backgroundColor: 'white',
+                                marginBottom: 20,
+                            }}
+                            autoCapitalize="none"
                             placeholder="Password"
-                            placeholderTextColor="#65499c"
-                            autoCapitalize="none" />
+                            secureTextEntry={true}
+                            autoCorrect={false}
+                            returnKeyType="next"
+                            ref={input => (this.email2Input = input)}
+                            onChangeText={this.onChange}
+                        />
                     </View>
 
                     <View>
@@ -44,17 +81,11 @@ class EmailInputScreen extends Component {
                         />
                     </View>
                     <View style={styles.socialWrapper}>
-                        <Text style={{ color: '#65499c', fontSize: 16 }}>Sign in with</Text>
+                        <Text style={{ color: '#65499c', fontSize: 16 }}>Sign up with</Text>
                         <View style={styles.socialLogin}>
                             <SocialIcon type="facebook" />
                             <SocialIcon type="google" />
                         </View>
-                        <TouchableOpacity
-                        onPress={()=>this.props.navigation.navigate('ForgotPassword')}
-                        style={{marginTop: 20}}
-                        >
-                            <Text style={{ color: '#65499c', fontSize: 16 }}>Forgot Password?</Text>
-                        </TouchableOpacity>
                     </View>
                 </ScrollView>
 
@@ -91,4 +122,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default EmailInputScreen;
+export default SignupScreen;
